@@ -80,7 +80,7 @@ namespace seminar_5
                 MyMC.PrintArray(numbers);
                 Console.WriteLine($"Количество положительных чисел = {MyMC.CountChet(numbers)}");
             }
-            //Task34();
+            Task34();
             void Task36()
             {
                 int size = MyMC.Input("Введите размер массива: ");
@@ -89,7 +89,17 @@ namespace seminar_5
                 MyMC.PrintArray(numbers);
                 Console.WriteLine($"Сумма Элементов с нечетными индексами = {MyMC.SumNechetIndex(numbers)}");
             }
-            Task36();
+            //Task36();
+            void Task38()
+            {
+                //Задайте массив вещественных чсисел. найдите разницу между максимальным и минимальным элементов массива
+                int size = MyMC.Input("Введите размер массива: ");
+                int[] numbers = new int[size];
+                MyMC.RandomArray(numbers,100,999);
+                MyMC.PrintArray(numbers);
+                Console.WriteLine($"Сумма Элементов с нечетными индексами = {MyMC.SumNechetIndex(numbers)}");
+            }
+            //Task38();
         }
             
         
