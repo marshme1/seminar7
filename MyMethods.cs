@@ -108,7 +108,7 @@ namespace MyLib
             for (int i=1; i < array.Length; i=i+2)
             {
                 sum = sum + array[i];
-                Console.WriteLine(sum);
+               
             }
             return sum;
         }

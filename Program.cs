@@ -7,8 +7,8 @@ namespace seminar_5
 {
     class Program
     {
-        static void Main(string[] args)
-        {
+        //static void Main(string[] args)
+        
              void Task31()
             {
                 int size = MyMC.Input("Введите размер массива: ");
@@ -100,7 +100,7 @@ namespace seminar_5
                 Console.WriteLine($"Разница между максимальным числом {MyMC.MaxArray(numbers)} и минимальным числом {MyMC.MinArray(numbers)} = {MyMC.MaxArray(numbers)- MyMC.MinArray(numbers)}");
             }
             //Task38();
-        }
+        
             
         
     }
