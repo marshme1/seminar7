@@ -1,0 +1,15 @@
+G:\УЧЕБА\Знакомство с программирование с#\seminar 5\obj\Debug\net8.0\seminar 5.csproj.AssemblyReference.cache
+G:\УЧЕБА\Знакомство с программирование с#\seminar 5\obj\Debug\net8.0\seminar 5.GeneratedMSBuildEditorConfig.editorconfig
+G:\УЧЕБА\Знакомство с программирование с#\seminar 5\obj\Debug\net8.0\seminar 5.AssemblyInfoInputs.cache
+G:\УЧЕБА\Знакомство с программирование с#\seminar 5\obj\Debug\net8.0\seminar 5.AssemblyInfo.cs
+G:\УЧЕБА\Знакомство с программирование с#\seminar 5\obj\Debug\net8.0\seminar 5.csproj.CoreCompileInputs.cache
+G:\УЧЕБА\Знакомство с программирование с#\seminar 5\bin\Debug\net8.0\seminar 5.exe
+G:\УЧЕБА\Знакомство с программирование с#\seminar 5\bin\Debug\net8.0\seminar 5.deps.json
+G:\УЧЕБА\Знакомство с программирование с#\seminar 5\bin\Debug\net8.0\seminar 5.runtimeconfig.json
+G:\УЧЕБА\Знакомство с программирование с#\seminar 5\bin\Debug\net8.0\seminar 5.dll
+G:\УЧЕБА\Знакомство с программирование с#\seminar 5\bin\Debug\net8.0\seminar 5.pdb
+G:\УЧЕБА\Знакомство с программирование с#\seminar 5\obj\Debug\net8.0\seminar 5.dll
+G:\УЧЕБА\Знакомство с программирование с#\seminar 5\obj\Debug\net8.0\refint\seminar 5.dll
+G:\УЧЕБА\Знакомство с программирование с#\seminar 5\obj\Debug\net8.0\seminar 5.pdb
+G:\УЧЕБА\Знакомство с программирование с#\seminar 5\obj\Debug\net8.0\seminar 5.genruntimeconfig.cache
+G:\УЧЕБА\Знакомство с программирование с#\seminar 5\obj\Debug\net8.0\ref\seminar 5.dll
