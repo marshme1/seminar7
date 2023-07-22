@@ -45,20 +45,51 @@ namespace seminar_5
             //Task33();
             void Task35()
             {
-                int size = 10
+                int size = 10;
                 int[] numbers = new int[size];
-                MyMC.RandomArray(numbers, 0, 1000);
-                int count = 0;
-                for (int i = 0; i <numbers.Length; i++)
-                {
-                    if (numbers[i] > 10 && numbers[i]<99)
-                    {
-                        count+=1;
-                    }
-                }
-                Console.WriteLine(count);
+                MyMC.RandomArray(numbers, 0, 2000);
+                MyMC.CountNumbersOtrezok(numbers, 10, 99);
             }
-            Task35();
+            //Task35();
+            void Task37()
+            {
+                int size = MyMC.Input("Введите размер массива: ");
+                int[] numbers = new int[size];
+                MyMC.RandomArray(numbers, 10, 20);
+                MyMC.PrintArray(numbers);
+                int size2=0;
+
+                if (size%2 == 1)  size2 = size/2 +1;
+                else  size2 = size/2;
+                int[] numbers2 = new int[size2];
+               
+               for (int i = 0; i < numbers2.Length; i++)
+               {
+                    if (i == numbers.Length - 1 - i)  numbers2[i] = numbers[i];
+                    else numbers2[i] = numbers[i] * numbers[(numbers.Length - 1 - i)];
+
+               }
+                MyMC.PrintArray(numbers2);
+            }
+            //Task37();
+            void Task34()
+            {
+                int size = MyMC.Input("Введите размер массива: ");
+                int[] numbers = new int[size];
+                MyMC.RandomArray(numbers,100,999);
+                MyMC.PrintArray(numbers);
+                Console.WriteLine($"Количество положительных чисел = {MyMC.CountChet(numbers)}");
+            }
+            //Task34();
+            void Task36()
+            {
+                int size = MyMC.Input("Введите размер массива: ");
+                int[] numbers = new int[size];
+                MyMC.RandomArray(numbers,100,999);
+                MyMC.PrintArray(numbers);
+                Console.WriteLine($"Сумма Элементов с нечетными индексами = {MyMC.SumNechetIndex(numbers)}");
+            }
+            Task36();
         }
             
         

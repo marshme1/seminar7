@@ -12,6 +12,7 @@ namespace MyLib
             return Convert.ToInt32(Console.ReadLine());
 
         }
+        
         public static void PrintArray(int[] array)
         {
             for (int i = 0; i < array.Length; i++)
@@ -20,7 +21,7 @@ namespace MyLib
                 }
                 Console.WriteLine();
         }
-        public static void RandomArray(int[] nums, int minValue, int maxValue)
+        public static void RandomArray(int[] nums, int minValue = -10, int maxValue= 10)
         {
             Random rnd = new Random();
 
@@ -61,6 +62,37 @@ namespace MyLib
             }
             MyMC.PrintArray(array);
             Console.WriteLine(bools);
+        }
+        public static void CountNumbersOtrezok(int [] array, int minValue, int maxValue)
+        {
+            int count = 0;
+            for (int i = 0; i <array.Length; i++)
+            {
+                if (array[i] > minValue && array[i]<maxValue)
+                {
+                    count+=1;
+                }
+            }
+            MyMC.PrintArray(array);
+            Console.WriteLine($"Количество элементов массива в отрезке от 10 до 99 = {count}");
+        }
+        public static int CountChet(int[] array)
+        {
+            int count = 0;
+            for (int i=0; i < array.Length; i++)
+            {
+                if (array[i]%2==0) count +=1;
+            }
+            return count;
+        }
+        public static int SumNechetIndex(int[] array)
+        {
+            int sum = 0;
+            for (int i=1; i < array.Length; i = i + 2)
+            {
+                sum =+ array[i];
+            }
+            return sum;
         }
     }
 }
