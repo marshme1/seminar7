@@ -30,7 +30,7 @@ namespace seminar_5
                 Console.WriteLine($"Количество введенных вами чисел больше 0 = {count}");
             }
             Console.Clear();
-            //Task41_1();
+            Task41_1();
 
             void Task43()
             {
@@ -48,7 +48,7 @@ namespace seminar_5
                 }
                 else  Console.WriteLine($"Точки пересечения двух прямых с заданными переменными не существует ");
             }
-            Task43();
+            //Task43();
         }  
         
     }
