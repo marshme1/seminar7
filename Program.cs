@@ -7,8 +7,8 @@ namespace seminar_5
 {
     class Program
     {
-        //static void Main(string[] args)
-        
+        static void Main(string[] args)
+        {
              void Task31()
             {
                 int size = MyMC.Input("Введите размер массива: ");
@@ -100,7 +100,61 @@ namespace seminar_5
                 Console.WriteLine($"Разница между максимальным числом {MyMC.MaxArray(numbers)} и минимальным числом {MyMC.MinArray(numbers)} = {MyMC.MaxArray(numbers)- MyMC.MinArray(numbers)}");
             }
             //Task38();
-        
+            void Task39()
+            {
+                int size = MyMC.Input("Введите размер массива: ");
+                int[] numbers = new int[size];
+                MyMC.RandomArray(numbers, 1,20);
+                MyMC.PrintArray(numbers);
+                int halSize = numbers.Length/2;
+                MyMC.PerevernutArray(numbers);
+                MyMC.PrintArray(numbers);
+
+            }
+            //Task39();
+            void Task42()
+            {
+                
+                Console.WriteLine("Введите число");
+                int num = Convert.ToInt32(Console.ReadLine());
+                int[] numbers = new int[8];
+                int i = 0;
+                while (num !=0)
+                {
+                    numbers[i] = num%2;
+                    num=num/2;
+                    i++;
+                }
+                MyMC.PerevernutArray(numbers);
+                MyMC.PrintArray(numbers);
+            }
+            //Task42();
+            void Task42_1()
+            {
+                Console.WriteLine("Введите число");
+                int num = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine($"{MyMC.Perevod10_2(num)}");
+            }
+            //Task42_1();
+            void Task44()
+            {
+                Console.WriteLine("Введите количество чисел Фибоначчи");
+                int size = Convert.ToInt32(Console.ReadLine());
+                
+                int[] numbers = new int[size];
+                for (int i = 0; i<size; i++)
+                {
+                    if (i==0 || i==1) numbers[i]=1;
+                    else
+                    {
+                        numbers[i]=numbers[i-1]+numbers[i-2];
+                    }
+                }
+                MyMC.PrintArray(numbers);
+            }
+            Task44();  
+
+        }
             
         
     }

@@ -4,8 +4,7 @@ namespace seminar_5
 {
     class DZ5
     {
-        static void Main(string[] args)
-        {
+        
             void Task34()
             {
                 int size = MyMC.Input("Введите размер массива: ");
@@ -14,7 +13,7 @@ namespace seminar_5
                 MyMC.PrintArray(numbers);
                 Console.WriteLine($"Количество четных = {MyMC.CountChet(numbers)}");
             }
-            Task34();
+            //Task34();
             void Task36()
             {
                 int size = MyMC.Input("Введите размер массива: ");
@@ -34,7 +33,7 @@ namespace seminar_5
                 Console.WriteLine($"Разница между максимальным числом {MyMC.MaxArray(numbers)} и минимальным числом {MyMC.MinArray(numbers)} = {MyMC.MaxArray(numbers)- MyMC.MinArray(numbers)}");
             }
             //Task38();
-        }
+        
     }
 }
 

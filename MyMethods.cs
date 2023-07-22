@@ -143,5 +143,33 @@ namespace MyLib
             return maxValue - minValue;
                         
         }
+        public static void PerevernutArray(int [] numbers)
+        {
+        int halSize = numbers.Length/2;
+        //for (int i =0; i < halSize; i++)
+            //{
+                //int temp = numbers[i];
+                //numbers[i]=numbers[numbers.Length-i-1];
+                //numbers[numbers.Length-i-1] =temp;
+            //}
+        //ИЛИ
+        for (int i =0; i < halSize; i++)
+                {
+                    (numbers[i], numbers[numbers.Length-1-i]) =(numbers[numbers.Length-1-i], numbers[i]);
+                }
+        }
+        public static int Perevod10_2(int number)
+            {
+                int bias = 1;
+               
+                int result = 0;
+                while (number>0)
+                {
+                    result += number%2*bias;
+                    number/=2;
+                    bias*=10;
+                }
+                return result;
+            }
     }
 }
