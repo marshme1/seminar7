@@ -24,8 +24,8 @@ namespace seminar_5
                     else 
                     {sumpol+=nums[i];}
                 }
-                Console.WriteLine(sumotr);
-                Console.WriteLine(sumpol);
+                Console.WriteLine($"Сумма отрицательных элементов = {sumotr}");
+                Console.WriteLine($"Сумма положительных элементов = {sumpol}");
                 MyMC.PrintArray(nums);
             }
             Task31();
