@@ -30,6 +30,23 @@ namespace MyLib
                nums[i] = rnd.Next( minValue, maxValue+1);
             }
         }
+        public static void DoubleRandomArray(double[] nums, int minValue = -10, int maxValue= 10)
+        {
+            Random rnd = new Random();
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+               nums[i] = rnd.Next( minValue, maxValue) + Math.Round(rnd.NextDouble(),2) ;
+            }
+        }
+        public static void DoublePrintArray(double[] array)
+        {
+            for (int i = 0; i < array.Length; i++)
+                {
+                    Console.Write($"{array[i]} ");
+                }
+                Console.WriteLine();
+        }
         public static void SumPozitiveAndNegative(int[] array)
         {
             int sumotr=0;
@@ -88,11 +105,43 @@ namespace MyLib
         public static int SumNechetIndex(int[] array)
         {
             int sum = 0;
-            for (int i=1; i < array.Length; i = i + 2)
+            for (int i=1; i < array.Length; i=i+2)
             {
-                sum =+ array[i];
+                sum = sum + array[i];
+                Console.WriteLine(sum);
             }
             return sum;
+        }
+        public static double MaxArray(double[] numbers)
+        {
+            double maxValue = numbers[0];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i]>maxValue) maxValue = numbers[i];   
+            } 
+            return maxValue;
+        }
+        public static double MinArray(double[] numbers)
+        {
+            double minValue = numbers[0];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i]<minValue) minValue = numbers[i];    
+            } 
+            return minValue;
+        }
+        public static double DifferenseMaxMin(double[] numbers)
+        {
+            double maxValue = numbers[0];
+            double minValue = numbers[0];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i]>maxValue) maxValue = numbers[i];
+                if (numbers[i]<minValue) minValue = numbers[i];
+                    
+            } 
+            return maxValue - minValue;
+                        
         }
     }
 }
