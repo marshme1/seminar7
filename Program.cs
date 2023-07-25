@@ -243,9 +243,51 @@ namespace seminar_5
                 MyMC.PrintArray(matrix);
                 
             }
-            Console.Clear();
-            Task48();
             
+            void Task49()
+            {
+                int rows = 3;
+                int columns = 4;
+                int [,] matrix = new int [rows, columns];
+                MyMC.FillArray(matrix);
+                MyMC.PrintArray(matrix);
+                for (int i = 0; i<matrix.GetLength(0); i++)
+                {
+                    for (int j = 0; j<matrix.GetLength(1); j++)
+                    {
+                        if (i%2==0 && j%2==0)
+                        {
+                            matrix[i,j] = matrix[i,j]*matrix[i,j];
+                        }
+                    }
+                }
+                Console.WriteLine();
+                MyMC.PrintArray(matrix);
+                
+            }
+            void Task51()
+            {
+                int rows = 3;
+                int columns = 4;
+                int [,] matrix = new int [rows, columns];
+                MyMC.FillArray(matrix);
+                MyMC.PrintArray(matrix);
+                int sum = 0;
+                
+                for (int i = 0; i<matrix.GetLength(0); i++)
+                {
+                    if (i<=matrix.GetLength(1))
+                    {
+                        sum+=matrix[i,i];
+                    }
+                    
+                }
+                Console.WriteLine(sum);
+                
+                
+            }
+            Console.Clear();
+            Task51();
         }
             
         
