@@ -7,8 +7,8 @@ namespace seminar_5
 {
     class Program
     {
-        //static void Main(string[] args)
-        //{
+        static void Main(string[] args)
+        {
              void Task31()
             {
                 int size = MyMC.Input("Введите размер массива: ");
@@ -215,7 +215,38 @@ namespace seminar_5
             }
             //Task43();
             
-        //}
+            void Task46()
+            {
+                
+                int rows = 4;
+                int columns = 5;
+                int [,] matrix = new int [rows, columns];
+
+                MyMC.FillArray(matrix);
+                MyMC.PrintArray(matrix);
+                
+                
+            }
+            
+            void Task48()
+            {
+                int rows = 3;
+                int columns = 4;
+                int [,] matrix = new int [rows, columns];
+                for (int i = 0; i<matrix.GetLength(0); i++)
+                {
+                    for (int j = 0; j<matrix.GetLength(1); j++)
+                    {
+                        matrix[i, j] = i+j;
+                    }
+                }
+                MyMC.PrintArray(matrix);
+                
+            }
+            Console.Clear();
+            Task48();
+            
+        }
             
         
     }
