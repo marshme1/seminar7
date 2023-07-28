@@ -5,7 +5,8 @@ namespace seminar_5
     class DZ5
     {
         
-        
+        static void Main(string[] args)
+        {
             void Task41_1()
             {
                 
@@ -52,7 +53,87 @@ namespace seminar_5
 
             
             //Console.Clear();
-           
+            
+            
+           // Напишите программу, которая на вход принимает индексы элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
+            void Task47()
+            {
+                //Задайте двумерный массив размером m×n, заполненный случайными вещественными числами, округлёнными до одного знака.
+                int m = MyMC.Input("Введите размер строки массива: ");
+                int n = MyMC.Input("Введите размер столбца массива: ");
+                double [,] Array = new double[m,n];
+                Random random = new Random();
+                for (int i = 0; i<Array.GetLength(0); i++)
+                {
+                    for (int j = 0; j<Array.GetLength(1); j++)
+                    {
+                        Array[i,j] = random.Next(-100,100) + Math.Round(random.NextDouble(),1);
+                    }
+                }
+                MyMC.PrintDoubleArray(Array);
+            }
+            //Task47();
+            void Task52() //задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+            {
+                int m = MyMC.Input("Введите количество строк массива: ");
+                int n = MyMC.Input("Введите количество столбцов массива: ");
+                int[,] Array = new int[m,n];
+                MyMC.FillArray(Array);
+                MyMC.PrintArray(Array);
+                Console.WriteLine("Среднее арифместическое в каждом столбце:");
+                for(int i=0; i<n;i++)
+                {
+                    Console.Write("_______");
+                }
+                Console.WriteLine();
+                Console.WriteLine("Номер столбца:");
+                for(int i=1; i<=n;i++)
+                {
+                    Console.Write($"{i} \t");
+                }
+                Console.WriteLine();
+                int sum = 0;
+                Console.WriteLine("Среднее арифместическое в каждом столбце:");
+                for (int i=0;i<n;i++)
+                { 
+
+                   for (int j=0;j<m;j++) 
+                   {
+                        sum +=Array[j,i];
+                   }
+                    Console.Write($"{sum} \t");
+                    sum=0;
+                }
+
+            }
+            //Task52();
+            void Task50()
+            {
+                int sizeRows = MyMC.Input("Введите количество строк массива: ");
+                int sizeColumns = MyMC.Input("Введите количество столбцов массива: ");
+                int[,] Array = new int[sizeRows,sizeColumns];
+                MyMC.FillArray(Array);
+                MyMC.PrintArray(Array);
+                int indexRows = MyMC.Input("Введите индекс строки массива: ");
+                int indexColumns = MyMC.Input("Введите идекс столбца массива: ");
+
+                if (indexRows>=sizeRows || indexColumns>=sizeColumns)
+                {
+                    Console.WriteLine("Такого элемента в массиве нет");
+                }
+                else
+                {
+                    Console.WriteLine(Array[indexRows,indexColumns]);
+                }
+            }
+            Task50();
+
+
+
+
+        } 
+          
+
         
         
     }

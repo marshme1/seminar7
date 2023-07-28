@@ -7,8 +7,8 @@ namespace seminar_5
 {
     class Program
     {
-        static void Main(string[] args)
-        {
+        //static void Main(string[] args)
+        //{
              void Task31()
             {
                 int size = MyMC.Input("Введите размер массива: ");
@@ -286,9 +286,9 @@ namespace seminar_5
                 
                 
             }
-            Console.Clear();
-            Task51();
-        }
+            //Console.Clear();
+            //Task51();
+        //}
             
         
     }
