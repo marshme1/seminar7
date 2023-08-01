@@ -210,14 +210,16 @@ namespace seminar_5
                 int offsetLow=0;
                 int br=0;
                 //while(br!=2)
-                while (true)
+                while (m != sizeRows*sizeColumns )
                 {
                     while (true)
                     {
                         m++;
                         array[i,j]=m;
                         j+=1;
-                        if (j==(sizeColumns-1-offsetRight))  break;
+                        //Console.WriteLine($"i={i}, j={j}, m={m}");
+                        if (j==(sizeColumns-1-offsetRight) || j<0)  break;
+                        
                         
 
                     }
@@ -228,7 +230,8 @@ namespace seminar_5
                         m++;
                         array[i,j]=m;
                         i+=1;
-                        if (i==(sizeRows-1-offsetLow)) break;
+                        //Console.WriteLine($"i={i}, j={j}, m={m}");
+                        if (i==(sizeRows-1-offsetLow) || i <0 ) break ;
                         //if (i==(sizeRows-1)) break;
                         //i+=1;
 
@@ -240,35 +243,31 @@ namespace seminar_5
                         m++;
                         array[i,j]=m;
                         j-=1;
-                        if (j==(0+offsetLeft)) break;
+                        //Console.WriteLine($"i={i}, j={j}, m={m}");
+                        if (j==(0+offsetLeft) || j<0) break;
                         //j-=1;
 
                     }
                     //i-=1;
                     offsetLeft+=1;
-                    while (true)
+                    if (sizeColumns%2==0 && sizeRows%2==0) if (i==(3) && j == (4)) break;
+                    while (m != sizeRows*sizeColumns)
                     {
                         m++;
                         array[i,j]=m;
                         i-=1;
-                        if (i==(0+offsetTop))  break;
+                        //Console.WriteLine($"i={i}, j={j}, m={m}");
+                        if (i==(0+offsetTop) || i<0)  break;
                         //i-=1;
 
                     }
-                    //if (sizeColumns%2==0 && sizeRows%2==0) if (i==sizeRows/2 && j == sizeColumns/2+1) break;
-                    //else if (i==sizeRows/2 +1  && j == sizeColumns/2+1) break;
-                    //Console.WriteLine($"{i} {j}");
-                    offsetLow+=1;
-                    if (sizeColumns%2==0 && sizeRows%2==0) if (i==(sizeRows/2) && j == (sizeColumns/2-1)) break;
                     
-                    //if (i==sizeRows/2 && j == sizeColumns/2+1) break;
-                    //if (sizeColumns%2==0 && sizeRows%2==0) if (i==sizeRows/2 && j == sizeColumns/2-1) break;
-                    //else if (i==sizeRows/2-1  && j == sizeColumns/2+1) break;
-                    //br+=1;
+                    offsetLow+=1;
+                    
                     MyMC.PrintArray(array);
                     Console.WriteLine();
-                    Console.WriteLine($"{offsetTop} {offsetRight} {offsetLow} {offsetLeft}");
-                    Console.WriteLine($"{i} {j}");
+                    //Console.WriteLine($"{offsetTop} {offsetRight} {offsetLow} {offsetLeft}");
+                    //Console.WriteLine($"{i} {j}");
                 }
                 //MyMC.PrintArray(array);
             }
