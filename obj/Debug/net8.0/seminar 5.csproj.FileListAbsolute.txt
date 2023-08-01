@@ -13,3 +13,4 @@ G:\УЧЕБА\Знакомство с программирование с#\semin
 G:\УЧЕБА\Знакомство с программирование с#\seminar 5\obj\Debug\net8.0\seminar 5.pdb
 G:\УЧЕБА\Знакомство с программирование с#\seminar 5\obj\Debug\net8.0\seminar 5.genruntimeconfig.cache
 G:\УЧЕБА\Знакомство с программирование с#\seminar 5\obj\Debug\net8.0\ref\seminar 5.dll
+G:\УЧЕБА\Знакомство с программирование с#\seminar 5\obj\Debug\net8.0\seminar 5.sourcelink.json

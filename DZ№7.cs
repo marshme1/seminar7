@@ -126,8 +126,154 @@ namespace seminar_5
                     Console.WriteLine(Array[indexRows,indexColumns]);
                 }
             }
-            Task50();
+            //Task50();
+//Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию 
+//элементы каждой строки двумерного массива.
+            void Task54()
+            {
+                int sizeRows = MyMC.Input("Введите количество строк массива: ");
+                int sizeColumns = MyMC.Input("Введите количество столбцов массива: ");
+                int[,] array = new int[sizeRows,sizeColumns];
+                MyMC.FillArray(array);
+                MyMC.PrintArray(array);
+                int [] temp = new int[sizeColumns];
+                for (int i = 0; i<array.GetLength(0);i++)
+                {
+                    for (int j = 0; j<array.GetLength(1);j++)
+                    {
+                        temp[j] = array[i,j];
+                    }
+                    //MyMC.PrintArray(temp);
+                    Array.Sort(temp);
+                    Array.Reverse(temp);
+                    //MyMC.PrintArray(temp);
+                    for (int k = 0; k<array.GetLength(1);k++)
+                    {
+                        array[i,k]=temp[k];
+                    }
+                }
+                Console.WriteLine();
+                MyMC.PrintArray(array);
+                
+            }
+            //Task54();
+//Задача 56: Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить 
+//строку с наименьшей суммой элементов.
+            void Task56()
+            {
+                int sizeRows = MyMC.Input("Введите количество строк массива: ");
+                int sizeColumns = sizeRows;
+                int[,] array = new int[sizeRows,sizeColumns];
+                MyMC.FillArray(array);
+                MyMC.PrintArray(array);
+                int indexRows=0;
+                int minIndex=0;
+                int minSum=0;
+                int sum=0;
+                for (int i = 0; i<array.GetLength(0); i++)
+                {
+                    indexRows=i;
+                    for (int j = 0; j<array.GetLength(1); j++)
+                    {
+                        sum +=array[i,j];
+                    }
+                    //Console.WriteLine(sum);
 
+                    if (i==0) 
+                    {
+                        minSum=sum;
+                    }
+                    if (minSum>sum)
+                    {
+                        minSum=sum;
+                        minIndex = indexRows;
+                    }
+                    sum=0;
+
+                }
+                Console.WriteLine($"Строка с наименьшей суммой элементов: {minIndex}");
+            }
+            //Task56();
+                //Задача 58: Заполните спирально массив 4 на 4 числамт от 1 до 16.
+            void Task58()
+            {
+                int sizeRows = MyMC.Input("Введите количество строк массива: ");
+                int sizeColumns = MyMC.Input("Введите количество столбцов массива: ");
+                int[,] array = new int[sizeRows,sizeColumns];
+                
+                int m=0;
+                int i=0;
+                int j=0;
+                int offsetTop=0;
+                int offsetRight=0;
+                int offsetLeft=0;
+                int offsetLow=0;
+                int br=0;
+                //while(br!=2)
+                while (true)
+                {
+                    while (true)
+                    {
+                        m++;
+                        array[i,j]=m;
+                        j+=1;
+                        if (j==(sizeColumns-1-offsetRight))  break;
+                        
+
+                    }
+                    //i+=1;
+                    offsetTop+=1;
+                    while (true)
+                    {
+                        m++;
+                        array[i,j]=m;
+                        i+=1;
+                        if (i==(sizeRows-1-offsetLow)) break;
+                        //if (i==(sizeRows-1)) break;
+                        //i+=1;
+
+                    }
+                    //j-=1;
+                    offsetRight+=1;
+                    while (true)
+                    {
+                        m++;
+                        array[i,j]=m;
+                        j-=1;
+                        if (j==(0+offsetLeft)) break;
+                        //j-=1;
+
+                    }
+                    //i-=1;
+                    offsetLeft+=1;
+                    while (true)
+                    {
+                        m++;
+                        array[i,j]=m;
+                        i-=1;
+                        if (i==(0+offsetTop))  break;
+                        //i-=1;
+
+                    }
+                    //if (sizeColumns%2==0 && sizeRows%2==0) if (i==sizeRows/2 && j == sizeColumns/2+1) break;
+                    //else if (i==sizeRows/2 +1  && j == sizeColumns/2+1) break;
+                    //Console.WriteLine($"{i} {j}");
+                    offsetLow+=1;
+                    if (sizeColumns%2==0 && sizeRows%2==0) if (i==(sizeRows/2) && j == (sizeColumns/2-1)) break;
+                    
+                    //if (i==sizeRows/2 && j == sizeColumns/2+1) break;
+                    //if (sizeColumns%2==0 && sizeRows%2==0) if (i==sizeRows/2 && j == sizeColumns/2-1) break;
+                    //else if (i==sizeRows/2-1  && j == sizeColumns/2+1) break;
+                    //br+=1;
+                    MyMC.PrintArray(array);
+                    Console.WriteLine();
+                    Console.WriteLine($"{offsetTop} {offsetRight} {offsetLow} {offsetLeft}");
+                    Console.WriteLine($"{i} {j}");
+                }
+                //MyMC.PrintArray(array);
+            }
+            Console.Clear();
+            Task58();
 
 
 
@@ -137,6 +283,6 @@ namespace seminar_5
         
         
     }
-}
+}           
 
     
