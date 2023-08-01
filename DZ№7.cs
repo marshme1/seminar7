@@ -217,7 +217,7 @@ namespace seminar_5
                         m++;
                         array[i,j]=m;
                         j+=1;
-                        if (j>(sizeColumns-1-offsetRight))  break;
+                        if (j==(sizeColumns-1-offsetRight))  break;
                         
 
                     }
@@ -228,7 +228,7 @@ namespace seminar_5
                         m++;
                         array[i,j]=m;
                         i+=1;
-                        if (i>(sizeRows-1-offsetLow)) break;
+                        if (i==(sizeRows-1-offsetLow)) break;
                         //if (i==(sizeRows-1)) break;
                         //i+=1;
 
@@ -240,7 +240,7 @@ namespace seminar_5
                         m++;
                         array[i,j]=m;
                         j-=1;
-                        if (j>(0+offsetLeft)) break;
+                        if (j==(0+offsetLeft)) break;
                         //j-=1;
 
                     }
@@ -251,7 +251,7 @@ namespace seminar_5
                         m++;
                         array[i,j]=m;
                         i-=1;
-                        if (i>(0+offsetTop))  break;
+                        if (i==(0+offsetTop))  break;
                         //i-=1;
 
                     }
