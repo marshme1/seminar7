@@ -197,8 +197,9 @@ namespace seminar_5
                 //Задача 58: Заполните спирально массив 4 на 4 числамт от 1 до 16.
             void Task58()
             {
-                int sizeRows = MyMC.Input("Введите количество строк массива: ");
-                int sizeColumns = MyMC.Input("Введите количество столбцов массива: ");
+                int sizeRows = MyMC.Input("Введите четное количество строк и столбцов массива: ");
+                int sizeColumns = sizeRows;
+                //int sizeColumns = MyMC.Input("Введите четное количество столбцов массива: ");
                 int[,] array = new int[sizeRows,sizeColumns];
                 
                 int m=0;
@@ -264,12 +265,12 @@ namespace seminar_5
                     
                     offsetLow+=1;
                     
-                    MyMC.PrintArray(array);
+                    //MyMC.PrintArray(array);
                     Console.WriteLine();
                     //Console.WriteLine($"{offsetTop} {offsetRight} {offsetLow} {offsetLeft}");
                     //Console.WriteLine($"{i} {j}");
                 }
-                //MyMC.PrintArray(array);
+                MyMC.PrintArray(array);
             }
             Console.Clear();
             Task58();
